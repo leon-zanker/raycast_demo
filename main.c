@@ -130,7 +130,7 @@ float castRayDDA
     return (has_hit_wall) ? distance : max_distance;
 }
 
-void drawDottedLine(Vector2 start_pos, Vector2 end_pos, Color color;
+void drawDottedLine(Vector2 start_pos, Vector2 end_pos, Color color);
 
 int main(void) {
     const int screen_width = 800;
