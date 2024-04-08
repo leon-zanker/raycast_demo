@@ -130,20 +130,7 @@ float castRayDDA
     return (has_hit_wall) ? distance : max_distance;
 }
 
-void drawDottedLine(Vector2 start_pos, Vector2 end_pos, Color color) {
-    const float len = 4.0f;
-    const Vector2 dir = Vector2Normalize(Vector2Subtract(end_pos, start_pos));
-    const float full_distance = Vector2Distance(start_pos, end_pos);
-    const int steps = (int)(full_distance / (len * 2.0f));
-
-    for (int i = 0; i < steps; i++) {
-        start_pos = Vector2Add(start_pos, Vector2Scale(dir, len));
-        end_pos = Vector2Add(start_pos, Vector2Scale(dir, len));
-        if (i % 2 == 0) {
-            DrawLineV(start_pos, end_pos, color);
-        }
-    }
-}
+void drawDottedLine(Vector2 start_pos, Vector2 end_pos, Color color;
 
 int main(void) {
     const int screen_width = 800;
@@ -329,16 +316,6 @@ int main(void) {
             WHITE
         );
 
-        // // draw tooltips
-        // const char* longest_text = "[RIGHT CLICK] to remove tile";
-        // const int tooltips_start_pos = (int)screen_width - MeasureText(longest_text, 20)
-        // DrawRectangle(0, 0, MeasureText(longest_text, 20) + 8, 125, BLACK);
-        // DrawText("[WASD] to move origin", 5, 5, 20, GREEN);
-        // DrawText("[MOUSE] to move target", 5, 30, 20, GREEN);
-        // DrawText("[LEFT CLICK] to paint tile", 5, 55, 20, GREEN);
-        // DrawText(longest_text, 5, 80, 20, GREEN);
-        // DrawText("[C] to clear tiles", 5, 105, 20, GREEN);
-
         EndDrawing();
     }
 
@@ -349,5 +326,20 @@ int main(void) {
     free(map);
 
     CloseWindow();
-    return 0;
+    return EXIT_SUCCESS;
+}
+
+void drawDottedLine(Vector2 start_pos, Vector2 end_pos, Color color) {
+    const float len = 4.0f;
+    const Vector2 dir = Vector2Normalize(Vector2Subtract(end_pos, start_pos));
+    const float full_distance = Vector2Distance(start_pos, end_pos);
+    const int steps = (int)(full_distance / (len * 2.0f));
+
+    for (int i = 0; i < steps; i++) {
+        start_pos = Vector2Add(start_pos, Vector2Scale(dir, len));
+        end_pos = Vector2Add(start_pos, Vector2Scale(dir, len));
+        if (i % 2 == 0) {
+            DrawLineV(start_pos, end_pos, color);
+        }
+    }
 }

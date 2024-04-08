@@ -8,7 +8,7 @@ It was mostly made for my own learning purposes, however, I'm happy if someone e
 
 The following dependencies are needed to compile and run the program:
 
-- a Unix-like OS, e.g. Linux or macOS (it should be possible to also build the project on Windows, though this neither supported nor tested)
+- a Unix-like OS, e.g. Linux or macOS (it should be possible to also build the project on Windows, though this is neither supported nor tested)
 - a C compiler (the default is `clang`, though you can specifiy another compiler of your choice, such as `gcc`, via the `compiler` variable in the `build.sh` script)
 - `git`
 - `pkg-config`
