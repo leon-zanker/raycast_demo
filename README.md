@@ -56,7 +56,7 @@ cd ..
 rm -rf raycast_demo
 ```
 
-To remove the dependencies you would typically use the package manager that you used to install them. If you downloaded them from the official websites, there should be instuctions on how to unistall them there.
+To remove the dependencies you would typically use the package manager that you used to install them. If you downloaded them from the official websites, there should be instuctions on how to uninstall them there.
 
 ## Copyright
 
