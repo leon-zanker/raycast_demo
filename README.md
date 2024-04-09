@@ -19,7 +19,7 @@ These are available via package managers or their respective official websites.
 1. Clone the repository to a location of your choice.
 
 ```shell
-git clone https://github.com/leon-zanker/raycast_demo
+git clone https://github.com/leon-zanker/raycast_demo.git
 ```
 
 2. Move into the cloned directory.
