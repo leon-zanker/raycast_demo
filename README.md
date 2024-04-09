@@ -34,7 +34,7 @@ cd raycast_demo
 ./build.sh
 ```
 
-If you don't get any errors in the output, the build was successfull and the directory will now contain an executable called `raycast_demo`.
+If you don't get any errors in the output, the build was successful and the directory will now contain an executable called `raycast_demo`.
 
 If this is not the case, check if you have installed all the dependencies listed above and if `pkg-config` knows about `raylib`.
 
